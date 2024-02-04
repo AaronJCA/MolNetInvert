@@ -147,7 +147,7 @@ class CreateToolTip(object):
         self.tw= None
         if tw:
             tw.destroy()
-
+#
 def DefineCoordinates(nodeNumber, totalNodesInAssociation, currentAssociation, possibleAssociations, keyAtt, centerNode):
 
     spiral = 1
