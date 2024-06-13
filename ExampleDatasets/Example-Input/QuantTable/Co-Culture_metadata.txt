@@ -1,0 +1,10 @@
+filename	ATTRIBUTE_species name
+Mavert00556.mzXML	P. manginii
+Mavert00557.mzXML	P. manginii
+Mavert00558.mzXML	P. manginii
+Mavert00559.mzXML	P. hordei
+Mavert00560.mzXML	P. hordei
+Mavert00561.mzXML	P. hordei
+Mavert00566.mzXML	P. hordei;P. manginii
+Mavert00567.mzXML	P. hordei;P. manginii
+Mavert00568.mzXML	P. hordei;P. manginii
