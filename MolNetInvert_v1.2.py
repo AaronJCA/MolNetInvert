@@ -456,14 +456,14 @@ class MainApp(tk.Frame):
                     tk.messagebox.showinfo("Metadata File Error", "Missing metadata for sample." + "\n" + "\n" + "One of more lines in the file is missing a second column for the metadata." + "\n" + "\n" + \
                                            "The file should be a tab separated text file with the first column consisting of the samples names, and the second column consisting of their metadata grouping.")
                     return
-                MainApp.dataFiles_Dic[i-1] = summaryOfDataFile(ID = i-1, name = metaData_file[i].split('\t')[0], attributeClassification = metaData_file[i].split('\t')[1], sampleCol = 0)
+                MainApp.dataFiles_Dic[i-1] = summaryOfDataFile(ID = i-1, name = metaData_file[i].split('\t')[0], attributeClassification = metaData_file[i].split('\t')[1].replace('\n',""), sampleCol = 0)
                 attFound = 0
                 
                 for att in MainApp.allAttributes_Dic:
-                    if MainApp.allAttributes_Dic[att].name == metaData_file[i].split('\t')[1]:
+                    if MainApp.allAttributes_Dic[att].name == metaData_file[i].split('\t')[1].replace('\n',""):
                         attFound = 1
                 if attFound == 0:
-                    MainApp.allAttributes_Dic[len(MainApp.allAttributes_Dic)+1] = summaryOfAttribute(ID = i-1, name = metaData_file[i].split('\t')[1], sampleCols = [])
+                    MainApp.allAttributes_Dic[len(MainApp.allAttributes_Dic)+1] = summaryOfAttribute(ID = i-1, name = metaData_file[i].split('\t')[1].replace('\n',""), sampleCols = [])
 
             with open(MainApp.file_path, newline='') as csvfile:
                 featureTable_file = csv.reader(csvfile)
